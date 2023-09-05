@@ -124,8 +124,8 @@
                                 </li>
 
                                 <li>
-                                    <a href="">
-                                        Activities
+                                    <a href="{{ route('activities.index') }}">
+                                        Gallery & Activities
                                     </a>
                                 </li>
 

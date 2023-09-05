@@ -59,7 +59,7 @@
                         <div class="blog-details__bottom">
                             <p class="blog-details__tags">
                                 <a href="javascript::void(0)">
-                                    Million Myanmar Co.,Ltd
+                                    Share on your social media
                                 </a>
                             </p>
 
@@ -103,6 +103,9 @@
                                 @endforeach
                             </ul>
                         </div>
+
+                        @include('components.contact_card')
+
                     </div>
                 </div>
             </div>

@@ -19,7 +19,6 @@
     </section>
 
 
-
     <section class="news-section" style="padding: 50px 0 90px;">
         <div class="auto-container">
             <div class="row">
@@ -44,6 +43,7 @@
                                 </span>
                             </div>
                             <div class="content-box">
+
                                 <ul class="post-meta">
                                     <li>
                                         <i class="fa fa-folder"></i>
@@ -54,14 +54,17 @@
                                         Million Myanmar Co.,Ltd
                                     </li>
                                 </ul>
+
                                 <h4 class="title">
-                                    <a href="">
+                                    <a href="{{ route('news.show', $new->id) }}">
                                         {{ $new->title ?? '' }}
                                     </a>
                                 </h4>
+
                                 <div class="text">
                                     {!! Str::substr($new->description, 0, 100) !!}
                                 </div>
+
                                 <a href="{{ route('news.show', $new->id) }}" class="theme-btn btn-style-two">
                                     <span class="btn-title">
                                         Read More
