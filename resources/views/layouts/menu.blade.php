@@ -117,8 +117,24 @@
                                 Media Center
                             </a>
                             <ul>
-                                <li><a href="news-grid.html">Blog Grid</a></li>
-                                <li><a href="news-details.html">Blog Details</a></li>
+                                <li>
+                                    <a href="{{ route('news.index') }}">
+                                        Latest News
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="">
+                                        Activities
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="">
+                                        Corporate Profile
+                                    </a>
+                                </li>
+
                             </ul>
                         </li>
 
