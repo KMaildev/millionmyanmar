@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Activities;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,8 @@ class ActivitiesController extends Controller
         } else {
             $first_category = Category::findOrFail($category_id);
         }
+        $activities = Activities::where('categorie_id', $first_category->id)->get();
 
-        return view('activities.index', compact('first_category'));
+        return view('activities.index', compact('first_category', 'activities'));
     }
 }

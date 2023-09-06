@@ -40,30 +40,54 @@
             <div class="mixitup-gallery">
                 <div class="filters clearfix">
                     @foreach ($categories as $category)
-                        <a href="{{ route('activities.index') }}?category={{ $category->id }}" class="button-85" role="button">
+                        <a href="{{ route('activities.index') }}?category={{ $category->id }}" class="button-85"
+                            role="button">
                             {{ $category->title ?? '' }}
                         </a>
                     @endforeach
                 </div>
 
                 <div class="filter-list row">
-                    <!--Product Block-->
-                    <div class="product-block all mix pantry fruit col-lg-3 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image"><a href="shop-product-details.html"><img
-                                        src="images/resource/products/1.jpg" alt="" /></a></div>
-                            <div class="content">
-                                <h4><a href="shop-product-details.html">Show Piece</a></h4>
-                                <span class="price">$32.00</span>
-                                <span class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                        class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    @foreach ($activities as $activity)
+                        @php
+                            $images = explode(',', $activity->images);
+                        @endphp
+                        @foreach ($images as $image)
+                            <div class="product-block all mix pantry fruit col-lg-3 col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="image">
+                                        <a href="shop-product-details.html">
+                                            <img src="{{ $image }}" alt="Million Myanmar Co.,Ltd"
+                                                style="width: 100%; height: 250px; object-fit: cover; opject-position: center; background-size: cover;">
+                                        </a>
+                                    </div>
+                                    <div class="content" style="padding: 10px 10px 10px !important;">
+                                        <h4>
+                                            <a href="javascript::void(0)" style="font-size: 17px;">
+                                                {{ $activity->title ?? '' }}
+                                            </a>
+                                        </h4>
+                                        <span class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                    </div>
+                                    <div class="icon-box">
+                                        <a href="https://twitter.com/intent/tweet?url={{ url()->current() }}" class="ui-btn like-btn" target="_blank">
+                                            <i class="fab fa-facebook"></i>
+                                        </a>
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ url()->current() }}" class="ui-btn add-to-cart" target="_blank">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="icon-box">
-                                <a href="shop-product-details.html" class="ui-btn like-btn"><i class="fa fa-heart"></i></a>
-                                <a href="shop-cart.html" class="ui-btn add-to-cart"><i class="fa fa-shopping-cart"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                        @endforeach
+                    @endforeach
+
                 </div>
             </div>
         </div>
