@@ -94,12 +94,60 @@
                             </ul>
                         </li>
 
-                        <li class="dropdown">
-                            <a href="javascript::void(0)">Businesses</a>
-                            <ul>
-                                <li><a href="page-services.html">Services Grid</a></li>
-                                <li><a href="page-service-details.html">Services Details</a></li>
-                            </ul>
+
+                        <li class="current has-mega-menu dropdown">
+                            <a href="javascript::void(0)">
+                                Businesses
+                            </a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-bar row">
+                                    <div class="column col-lg-6">
+                                        <ul>
+                                            <li>
+                                                <a href="{{ route('travel.index') }}">
+                                                    <img src="{{ asset('data/business/passport.png') }}" alt=""
+                                                        style="width: 40px; height: 40px;">
+                                                    Travels & Tours
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="column col-lg-6">
+                                        <ul>
+                                            <li>
+                                                <a href="{{ route('real_estate.index') }}">
+                                                    <img src="{{ asset('data/business/mortgage.png') }}" alt=""
+                                                        style="width: 40px; height: 40px;">
+                                                    Real Estate
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="column col-lg-6">
+                                        <ul>
+                                            <li>
+                                                <a href="{{ route('employment.index') }}">
+                                                    <img src="{{ asset('data/business/manager.png') }}" alt=""
+                                                        style="width: 40px; height: 40px;">
+                                                    Employment Agency
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="column col-lg-6">
+                                        <ul>
+                                            <li>
+                                                <a href="{{ route('entertainment.index') }}">
+                                                    <img src="{{ asset('data/business/tv.png') }}" alt=""
+                                                        style="width: 40px; height: 40px;">
+                                                    Entertainment
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
 
                         <li class="dropdown">
@@ -107,8 +155,17 @@
                                 Sustainability & CSR
                             </a>
                             <ul>
-                                <li><a href="news-grid.html">Blog Grid</a></li>
-                                <li><a href="news-details.html">Blog Details</a></li>
+                                <li>
+                                    <a href="#">
+                                        Sustainability Direction
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        Responsible Business Practices
+                                    </a>
+                                </li>
                             </ul>
                         </li>
 
@@ -130,7 +187,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="">
+                                    <a href="{{ route('corporateprofile.index') }}">
                                         Corporate Profile
                                     </a>
                                 </li>

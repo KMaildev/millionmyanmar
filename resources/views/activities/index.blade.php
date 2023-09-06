@@ -56,10 +56,8 @@
                             <div class="product-block all mix pantry fruit col-lg-3 col-md-6 col-sm-12">
                                 <div class="inner-box">
                                     <div class="image">
-                                        <a href="shop-product-details.html">
-                                            <img src="{{ $image }}" alt="Million Myanmar Co.,Ltd"
-                                                style="width: 100%; height: 250px; object-fit: cover; opject-position: center; background-size: cover;">
-                                        </a>
+                                        <img data-enlargeable src="{{ $image }}" alt="Million Myanmar Co.,Ltd"
+                                            style="width: 100%; height: 250px; object-fit: cover; opject-position: center; background-size: cover;">
                                     </div>
                                     <div class="content" style="padding: 10px 10px 10px !important;">
                                         <h4>
@@ -76,10 +74,12 @@
                                         </span>
                                     </div>
                                     <div class="icon-box">
-                                        <a href="https://twitter.com/intent/tweet?url={{ url()->current() }}" class="ui-btn like-btn" target="_blank">
+                                        <a href="https://twitter.com/intent/tweet?url={{ url()->current() }}"
+                                            class="ui-btn like-btn" target="_blank">
                                             <i class="fab fa-facebook"></i>
                                         </a>
-                                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ url()->current() }}" class="ui-btn add-to-cart" target="_blank">
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ url()->current() }}"
+                                            class="ui-btn add-to-cart" target="_blank">
                                             <i class="fab fa-twitter"></i>
                                         </a>
                                     </div>
